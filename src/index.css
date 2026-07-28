@@ -1,0 +1,134 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  font-weight: 400;
+  color: #111827;
+  background-color: #eef2f7;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  --surface: #ffffff;
+  --surface-soft: #f8fafc;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: rgba(15, 23, 42, 0.08);
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --radius: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+button {
+  border-radius: 14px !important;
+  border: none;
+  padding: 0.85em 1.25em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background-color: var(--primary-dark);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.18);
+}
+
+.item-count-container {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--surface-soft);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.count-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.count-value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.count-action-button {
+  width: 100%;
+}
+
+.stock-info {
+  text-align: center;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+main {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+}
+
+.page-title {
+  width: 100%;
+  text-align: center;
+  margin: 2.5rem 0 1.25rem;
+  color: var(--text);
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  letter-spacing: -0.03em;
+}
+
+.footer {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  background: rgba(248, 250, 252, 0.95);
+  color: #475569;
+}
+
+.footer p,
+.footer span {
+  margin: 0;
+  line-height: 1.75;
+  color: #475569;
+}

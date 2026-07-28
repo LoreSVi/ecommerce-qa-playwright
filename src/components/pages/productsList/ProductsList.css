@@ -1,0 +1,14 @@
+.cards-container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 2.5rem 1rem 4rem;
+  background: transparent;
+}
+
+.cards-container > * {
+  min-width: 240px;
+}
