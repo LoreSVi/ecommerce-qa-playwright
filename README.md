@@ -1,5 +1,7 @@
 # Ecommerce QA Playwright
 
+![Playwright E2E](https://github.com/LoreSVi/ecommerce-qa-playwright/actions/workflows/playwright.yml/badge.svg)
+
 Un proyecto de ejemplo para demostrar habilidades de QA automation en una aplicación e-commerce desarrollada con React y Vite.
 
 ## ✅ Qué incluye
