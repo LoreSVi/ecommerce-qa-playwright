@@ -22,6 +22,7 @@ const ProductDetailContainer = () => {
     let data = {
       ...productSelected,
       quantity: cantidad,
+      name: productSelected.title,
     };
 
     addToCart(data);
