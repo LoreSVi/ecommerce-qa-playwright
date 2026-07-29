@@ -17,5 +17,6 @@ test("al hacer click en Ver detalle se navega a la vista de producto", async ({
   await expect(detalle).toBeVisible();
   await detalle.click();
   await expect(page).toHaveURL(/\/itemDetail\//);
-  await expect(page.getByText(/stock disponible|categoría:/i)).toBeVisible();
+  await expect(page.getByText(/Categor[ií]a:/i)).toBeVisible();
+  await expect(page.getByText(/Stock disponible:/i)).toBeVisible();
 });

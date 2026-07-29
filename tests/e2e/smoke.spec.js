@@ -33,10 +33,10 @@ test("smoke: flujo completo de compra desde home hasta checkout", async ({
   ).toBeVisible();
 
   if (productName) {
-    await expect(page.getByText(productName)).toBeVisible();
+    await expect(page.getByText(productName, { exact: false })).toBeVisible();
   }
   if (productPrice) {
-    await expect(page.getByText(productPrice)).toBeVisible();
+    await expect(page.getByText(productPrice, { exact: false })).toBeVisible();
   }
 
   await expect(page.getByText(/Cantidad: 1/i)).toBeVisible();
