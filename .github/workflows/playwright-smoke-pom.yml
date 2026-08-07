@@ -1,0 +1,32 @@
+name: Playwright Smoke POM
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  smoke-pom:
+    name: Run Playwright Smoke POM
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run smoke-pom test
+        run: npx playwright test tests/e2e/smoke-pom.spec.js --reporter=list
+        env:
+          CI: true
